@@ -25,20 +25,21 @@ Users should be able to:
 ### Screenshots
 
 Desktop
+
 ![](./src/assets/Overview%20Desktop.jpeg)
 
 Mobile
+
 ![](./src/assets/Overview%20Mobile.jpeg)
 
 Video
+
 ![](./src/assets/Overview.gif)
 
 ### Links
 
-- Solution URL: [GitHub](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
-
-**Note: To add links.**
+- Solution URL: [GitHub](https://github.com/im-victor-mendez/React-Product_Preview_Card_Component)
+- Live Site URL: [Netlify](https://fabulous-starlight-803819.netlify.app/)
 
 ## My process
 
