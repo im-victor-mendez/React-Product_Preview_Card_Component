@@ -53,9 +53,8 @@ function Card({img, type, title, description, originalPrice, discountedPrice, av
             onClick={() => setIsAdded(!isAdded)}
             animate={isAdded ? 'added' : 'deleted'}
             variants={variants}
-            transition={{
-                duration: 0.2
-            }}
+            transition={{duration: 0.2}}
+            whileHover={{ scale: 1.1 }}
             >
                 {!isAdded ?
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
