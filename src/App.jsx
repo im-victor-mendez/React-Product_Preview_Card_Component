@@ -1,5 +1,6 @@
 import './App.css'
 import './consts/fonts.scss'
+import './consts/colors.scss'
 import Card from './components/Card'
 import ProductMobile from "../images/image-product-mobile.jpg";
 
