@@ -1,5 +1,11 @@
+#root {
+    height: 100vh;
+
+    background-color: var(--cream);
+}
+
 .App {
-    background-color: #F3EAE3;
+    background-color: var(--cream);
 
     padding: 2rem 1rem;
 
