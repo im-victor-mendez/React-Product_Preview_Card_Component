@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const variants = {
     added: {
         backgroundColor: 'red',
-        width: 'max-content',
-        borderRadius: '100%',
+        width: 'fit-content',
+        borderRadius: '0.5rem',
     },
     deleted: {
         backgroundColor: 'var(--dark-cyan)',
@@ -29,7 +29,14 @@ const variants = {
 function Card({img, type, title, description, originalPrice, discountedPrice, available}) {
     const [isAdded, setIsAdded] = useState(false)
 
-    return <motion.section className='card'>
+    return <motion.section
+    className='card'
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+        duration: 0.5,
+    }}
+    >
         <img src={img} alt="" />
         <div id='product'>
             <h2 className='type'>{(type).toUpperCase()}</h2>
@@ -43,18 +50,22 @@ function Card({img, type, title, description, originalPrice, discountedPrice, av
 
             <motion.button
             className='add-to-cart'
+            onClick={() => setIsAdded(!isAdded)}
             animate={isAdded ? 'added' : 'deleted'}
             variants={variants}
-            onClick={() => setIsAdded(!isAdded)}
+            transition={{
+                duration: 0.2
+            }}
             >
                 {!isAdded ?
-                <div className='add-to-cart-content'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                     </svg>
-                    Add to cart
-                </div>
-                : 'X'}
+                : null
+                }
+                {
+                    !isAdded ? 'Add to cart' : 'Remove'
+                }
             </motion.button>
         </div>
     </motion.section>
