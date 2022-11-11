@@ -1,0 +1,29 @@
+@media (min-width: 1000px) {
+    .App {
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0rem;
+
+        .card {
+            width: 50%;
+            display: flex;
+            align-items: stretch;
+
+            img {
+                content: url(../../images/image-product-desktop.jpg);
+
+                width: 50%;
+
+                border-radius: 0.5rem 0rem 0rem 0.5rem;
+            }
+
+            #product {
+                max-width: 50%;
+            }
+        }
+    }
+}
